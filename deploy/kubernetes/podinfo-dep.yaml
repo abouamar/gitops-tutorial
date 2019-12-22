@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: podinfo
 spec:
-  replicas: 1
+  replicas: 5
   template:
     metadata:
       labels:
@@ -12,6 +12,6 @@ spec:
     spec:
       containers:
       - name: podinfo
-        image: registry.hub.docker.com/stefanprodan/podinfo:3.0.1
+        image: quay.io/stefanprodan/podinfo:3.0.0
         ports:
         - containerPort: 3000
